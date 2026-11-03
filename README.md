@@ -26,8 +26,7 @@ Then open http://localhost:8080.
 - `assets/img/` holds web-sized photos (originals stay in the parent folder) and `burgee.svg`.
 - `assets/fonts/` holds Montserrat (variable font, SIL Open Font License).
 
-## Still to replace (search for `PLACEHOLDER` or `SAMPLE` in the files)
+## To update
 
-1. **Alumni updates** in `index.html`: three "Alumni name" entries.
-2. **Blog posts** `first-regatta-recap.html` is a sample post. The learning-to-sail and Boat Barn posts are real.
-3. **Leadership photos**: the leadership cards show initials on a pennant. To use headshots instead, tell us which photo belongs to which officer.
+- **Alumni updates** in `index.html`: add a new `<article class="update">` for each alum who sends one in.
+- **Larchmont recap** in `blog/first-regatta-recap.html` is marked "Coming soon". Replace the text and the tag once it's written.
