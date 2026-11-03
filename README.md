@@ -1,11 +1,17 @@
 # Bates Sailing website
 
-Plain HTML, CSS and JS. No build step. Upload the whole `site` folder to any static host (GitHub Pages, Netlify, or Bates web hosting).
+Plain HTML, CSS and JS. No build step.
 
-To preview locally:
+Live site: https://btaylor2-hue.github.io/bates-sailing/
+
+## Publishing
+
+This folder is the GitHub repo [btaylor2-hue/bates-sailing](https://github.com/btaylor2-hue/bates-sailing). GitHub Pages publishes the `main` branch, so anything pushed to `main` goes live about a minute later.
+
+To preview locally before publishing:
 
 ```bash
-cd site && python3 -m http.server 8080
+python3 -m http.server 8080
 ```
 
 Then open http://localhost:8080.
