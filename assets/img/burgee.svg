@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 530" role="img" aria-label="Bates Sailing burgee">
+  <path d="M12 12 L748 265 L12 518 L192 265 Z" fill="#881124"/>
+  <path d="M12 12 L192 265 L12 518 Z" fill="#fff"/>
+  <path d="M12 12 L748 265 L12 518 Z M12 12 L192 265 L12 518 M192 265 L748 265" fill="none" stroke="#000" stroke-width="12" stroke-linejoin="round"/>
+  <text x="80" y="318" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="150">B</text>
+</svg>
