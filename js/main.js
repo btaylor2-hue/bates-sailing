@@ -10,6 +10,21 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  // Phones: fade the headline out as the intro text scrolls up over the pinned photo
+  const heroPin = document.querySelector(".hero-pin");
+  const heroTitle = document.querySelector(".hero h1");
+  const heroText = document.querySelector(".hero-pitch p");
+  if (heroPin && heroTitle && heroText) {
+    const fadeTitle = () => {
+      if (getComputedStyle(heroPin).position !== "sticky") { heroTitle.style.opacity = ""; return; }
+      const gap = heroText.getBoundingClientRect().top - heroTitle.getBoundingClientRect().bottom;
+      heroTitle.style.opacity = String(Math.min(1, Math.max(0, (gap + 40) / 60)));
+    };
+    fadeTitle();
+    window.addEventListener("scroll", fadeTitle, { passive: true });
+    window.addEventListener("resize", fadeTitle);
+  }
+
   // Mobile menu
   if (toggle && links) {
     const setOpen = (open) => {
