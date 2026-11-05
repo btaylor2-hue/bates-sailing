@@ -547,6 +547,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding: 4px 12px; border-radius: 999px;
 }
 .tag-home { background: var(--garnet); color: var(--sail); }
+.tag-away { background: var(--gray-100); color: var(--text-muted); }
 .regatta.is-home { background: var(--garnet-tint); margin-inline: calc(var(--s2) * -1); padding-inline: var(--s2); border-radius: var(--radius-sm); }
 .regatta.is-home .where { color: #4d2a31; }
 .schedule-foot { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s3); align-items: center; justify-content: space-between; color: var(--text-muted); }
