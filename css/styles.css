@@ -213,6 +213,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: grid; grid-template-rows: 1fr auto;
   padding: clamp(7rem, 16vh, 10rem) var(--pad-x) clamp(1.5rem, 4vw, 3.5rem);
 }
+.hero-pin { display: contents; }
 .hero-media { position: absolute; inset: 0; z-index: -2; }
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos-x) var(--pos-y); }
 .hero-frame::after {
@@ -287,6 +288,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   /* Phones: pin the headline to the photo so "on Taylor Pond." runs behind the sails */
   .hero h1 { top: max(6.5rem, calc((100cqh - 1600 * var(--img-scale)) * var(--pos-y-ratio) + var(--headline-row) * var(--img-scale) - 0.83em)); }
   .hero-stats { grid-template-columns: repeat(2, auto); border-radius: 18px; margin-top: 8px; }
+
+  /* Phones: the photo fills the screen and stays put while the intro and stats scroll up over it */
+  .hero-frame { display: contents; }
+  .hero-pin {
+    display: block; position: sticky; top: 8px; z-index: 0;
+    height: calc(100svh - 16px); min-height: 520px;
+    border-radius: 18px; overflow: hidden; isolation: isolate;
+  }
+  .hero-pin::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hero-scrim); }
+  .hero-pitch, .hero-stats { position: relative; z-index: 1; }
+  .hero-pitch {
+    max-width: none; margin-top: 8px; padding: var(--s4) var(--pad-x);
+    border-radius: 18px; background: var(--garnet);
+  }
 }
 
 /* ---------- Sections ---------- */
