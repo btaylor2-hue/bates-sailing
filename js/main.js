@@ -55,7 +55,6 @@
   const galleryLinks = [...document.querySelectorAll(".g-item")];
   if (lightbox && galleryLinks.length && typeof lightbox.showModal === "function") {
     const lbImg = lightbox.querySelector("img");
-    const lbCaption = lightbox.querySelector("figcaption");
     const lbCount = lightbox.querySelector(".lb-count");
     let current = 0;
     let opener = null;
@@ -65,7 +64,6 @@
       const thumb = galleryLinks[current].querySelector("img");
       lbImg.src = galleryLinks[current].href;
       lbImg.alt = thumb.alt;
-      lbCaption.textContent = thumb.alt;
       lbCount.textContent = `${current + 1} of ${galleryLinks.length}`;
     };
 
