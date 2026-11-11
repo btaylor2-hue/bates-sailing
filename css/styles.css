@@ -282,30 +282,25 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     --pos-x: 38%; --pos-y: 60%; --pos-y-ratio: 0.6;
     /* Photo row (in 2400x1600 px) the first headline line sits on */
     --headline-row: 740;
-    --hero-scrim: linear-gradient(180deg, rgba(45, 6, 14, 0.6) 0%, rgba(45, 6, 14, 0.1) 32%, rgba(45, 6, 14, 0.15) 50%, rgba(45, 6, 14, 0.78) 68%, rgba(45, 6, 14, 0.92) 100%);
+    --hero-scrim: linear-gradient(180deg, rgba(45, 6, 14, 0.6) 0%, rgba(45, 6, 14, 0.1) 32%, rgba(45, 6, 14, 0.12) 55%, rgba(45, 6, 14, 0.5) 100%);
   }
   .hero-sails { background-image: var(--hero-scrim), url("../assets/img/hero-fleet-1200.jpg"); }
   /* Phones: pin the headline to the photo so "on Taylor Pond." runs behind the sails */
   .hero h1 { top: max(6.5rem, calc((100cqh - 1600 * var(--img-scale)) * var(--pos-y-ratio) + var(--headline-row) * var(--img-scale) - 0.83em)); }
   .hero-stats { grid-template-columns: repeat(2, auto); border-radius: 18px; margin-top: 8px; }
 
-  /* Phones: the photo fills the screen and stays put while the intro, which starts at its bottom edge, scrolls up over it */
-  .hero-frame {
-    --pin-h: max(520px, calc(100svh - 16px));
-    display: flow-root; min-height: 0; padding: 0; border-radius: 0; overflow: visible; isolation: auto;
-  }
+  /* Phones: the photo is its own card and scrolls away with the page; the intro and stats are separate cards below it, with a white gap between each */
+  .hero-frame { display: contents; }
   .hero-frame::after { content: none; }
   .hero-pin {
-    display: block; position: sticky; top: 8px; z-index: 0;
-    height: var(--pin-h);
+    display: block; position: relative;
+    height: calc(100svh - 16px); min-height: 520px;
     border-radius: 18px; overflow: hidden; isolation: isolate;
   }
   .hero-pin::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hero-scrim); }
   .hero-pitch {
-    max-width: none; min-height: var(--pin-h); margin: calc(-1 * var(--pin-h)) 0 30svh;
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 0 var(--pad-x) 1.75rem;
-    text-shadow: 0 1px 16px rgba(45, 6, 14, 0.6);
+    max-width: none; margin-top: 8px; padding: var(--s4) var(--pad-x);
+    border-radius: 18px; background: var(--garnet); color: var(--sail);
   }
 }
 
