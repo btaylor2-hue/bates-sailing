@@ -280,13 +280,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero-frame { border-radius: 18px; min-height: calc(100dvh - 16px); padding-top: 7.5rem; }
   .hero-frame {
     --pos-x: 38%; --pos-y: 60%; --pos-y-ratio: 0.6;
-    /* Photo row (in 2400x1600 px) the first headline line sits on */
-    --headline-row: 740;
+    /* Photo row (in 2400x1600 px) where the tallest sail tops out */
+    --sail-top-row: 660;
     --hero-scrim: linear-gradient(180deg, rgba(45, 6, 14, 0.6) 0%, rgba(45, 6, 14, 0.1) 32%, rgba(45, 6, 14, 0.12) 55%, rgba(45, 6, 14, 0.5) 100%);
   }
-  .hero-sails { background-image: var(--hero-scrim), url("../assets/img/hero-fleet-1200.jpg"); }
-  /* Phones: pin the headline to the photo so "on Taylor Pond." runs behind the sails */
-  .hero h1 { top: max(6.5rem, calc((100cqh - 1600 * var(--img-scale)) * var(--pos-y-ratio) + var(--headline-row) * var(--img-scale) - 0.83em)); }
+  /* Phones: the whole headline sits in the sky just above the boats, in front of the photo (no sail cut-out) */
+  .hero-sails { display: none; }
+  .hero h1 { top: max(6.5rem, calc((100cqh - 1600 * var(--img-scale)) * var(--pos-y-ratio) + var(--sail-top-row) * var(--img-scale) - 2.85em - 0.75rem)); }
   .hero-stats { grid-template-columns: repeat(2, auto); border-radius: 18px; margin-top: 8px; }
 
   /* Phones: the photo is its own card and scrolls away with the page; the intro and stats are separate cards below it, with a white gap between each */
