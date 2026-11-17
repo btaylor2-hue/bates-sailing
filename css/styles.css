@@ -604,7 +604,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Blog ---------- */
 
-.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s4); }
+.posts { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s4); }
 .post-card { display: flex; flex-direction: column; }
 .post-card a.cover { display: block; border-radius: var(--radius-md); overflow: hidden; }
 .post-card img { aspect-ratio: 3 / 2; width: 100%; object-fit: cover; transition: transform 400ms var(--ease-out); }

@@ -29,4 +29,3 @@ Then open http://localhost:8080.
 ## To update
 
 - **Alumni updates** in `index.html`: add a new `<article class="update">` for each alum who sends one in.
-- **IOR recap** in `blog/first-regatta-recap.html` is marked "Coming soon". Replace the text and the tag once it's written.
